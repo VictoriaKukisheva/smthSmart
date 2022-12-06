@@ -36,6 +36,11 @@ namespace WpfPractice
             }
         }
 
+        /// <summary>
+        /// Реализация входа в приложение
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonRegist_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -45,7 +50,7 @@ namespace WpfPractice
                 if (userObj == null)
                 {
                     MessageBox.Show("Такого пользователя нет!", "Ошибка при авторизации!",
-                        MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBoxButton.OK, MessageBoxImage.Error); 
                 }
                 else if (userObj.Login == txtLogin.Text && txtPassword.Password == null)
                 {
