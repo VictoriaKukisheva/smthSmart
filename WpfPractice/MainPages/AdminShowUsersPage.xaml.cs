@@ -42,9 +42,7 @@ namespace WpfPractice.MainPages
 
             if (TbFinder.Text != null)
             {
-                users = users.
-                    Where(x => x.Login.ToLower().Contains(TbFinder.Text.ToLower())
-                            ).ToList();
+                users = users.Where(x => x.Login.ToLower().Contains(TbFinder.Text.ToLower())).ToList();
             }
 
             if (users.Count > 0)
