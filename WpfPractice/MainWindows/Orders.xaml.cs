@@ -53,7 +53,8 @@ namespace WpfPractice.MainPages
 
             Auth auth = new Auth();
             auth.Show();
-            this.Close();
+
+            Close();
         }
     }
 }
