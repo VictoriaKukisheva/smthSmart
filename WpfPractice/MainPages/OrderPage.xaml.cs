@@ -20,8 +20,7 @@ namespace WpfPractice.MainPages
     /// Логика взаимодействия для Order.xaml
     /// </summary>
     public partial class OrderPage : Page
-    {
-        
+    {    
         public OrderPage()
         {
             InitializeComponent();
@@ -53,7 +52,6 @@ namespace WpfPractice.MainPages
                                         x.Technic.ToLower().Contains(TbFinder.Text.ToLower()) ||
                                         x.Description.ToLower().Contains(TbFinder.Text.ToLower())).ToList();
             }
-
 
             if (TbDatePick.Text != null)
             {
@@ -134,6 +132,7 @@ namespace WpfPractice.MainPages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             AppConnect.ModelDB.ChangeTracker.Entries().ToList().ForEach(x => x.Reload());
+
             LbOrders.ItemsSource = FindOrders();
         }
     }
