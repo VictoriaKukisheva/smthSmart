@@ -33,6 +33,7 @@ namespace WpfPractice.MainPages
             {
                 SetFilterTypeItems();
                 SetFilterStatusItems();
+
                 if (order != null)
                 {
                     order1 = order;
